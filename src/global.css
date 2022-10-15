@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&family=Space+Grotesk:wght@600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Sora", sans-serif;
+}
+
+.smooth-transition {
+  transition: all 0.3s ease-in-out;
+}
+.float {
+  animation: float 5s infinite;
+}
+.hero {
+  font-family: "Space Grotesk", sans-serif;
+}
+.heroHeight {
+  height: calc(100vh - 80px);
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-20px);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
